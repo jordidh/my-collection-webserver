@@ -57,3 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
+# WebStorm files
+.idea
+
+# SSL secret files
+ssl
+
+# Basic Authentication secret files
+config/users.htpasswd
