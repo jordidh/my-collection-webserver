@@ -41,3 +41,16 @@ $ npm install
     ```
     2. Creem el fitxer ./config/users.htpassd amb els usuaris i les contrassenyes per l'autenticació
     3. Editem el fitxer el fitxer ./app.js per afegir l'autenticació bàsica
+7. Test
+    1. Instal·lació de l'entorn de test amb frisby
+    ```
+    $ npm install --save jasmine
+    $ npm install --save jasmine-node
+    $ npm install --save frisby
+    $ npm install --save mocha
+    $ npm install --save chai
+    ```
+    2. Inicialització carpetes per test (./spec)
+    ```
+    $ jasmine init
+    ```
