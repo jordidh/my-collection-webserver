@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include partials/header %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>Fitxa</h1>
+    <p>Nom: <%= fitxa.name%></p>
+    <p>Desc: <%= fitxa.description%></p>
+  </div>
+
+  <div class="jumbotron">
+    <h1>LLista d'avisos</h1>
+    <ul>
+        <% avisos.forEach(function(avis) { %>
+      <li><%= avis.alarmtime %> - <%= avis.name %> - <%= avis.description %></li>
+        <% }); %>
+    </ul>
+  </div>
+
+  <div class="jumbotron">
+    <h1>LLista d'històrics</h1>
+    <ul>
+        <% historics.forEach(function(historic) { %>
+      <li><%= historic.alarmtime %> - <%= historic.name %> - <%= historic.description %></li>
+        <% }); %>
+    </ul>
+  </div>
+</main>
+
+<footer>
+    <% include partials/footer %>
+</footer>
+
+</body>
+</html>

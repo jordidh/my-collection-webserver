@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+    <% include partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include partials/header %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>Fitxa</h1>
+        <p>Nom: <%= fitxa.name%></p>
+        <p>Desc: <%= fitxa.description%></p>
+        <p><a href="/fitxa/<%= fitxa.id%>">Fitxa</a></p>
+    </div>
+
+    <div class="jumbotron">
+        <h1>LLista d'avisos</h1>
+        <ul>
+            <% avisos.forEach(function(avis) { %>
+            <li><%= avis.alarmtime %> - <%= avis.name %> - <%= avis.description %></li>
+            <% }); %>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <% include partials/footer %>
+</footer>
+
+</body>
 </html>

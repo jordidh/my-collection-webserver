@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include partials/header %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>LLista de fitxes</h1>
+        <ul>
+            <% fitxes.forEach(function(fitxa) { %>
+            <li><a href="/fitxa/<%= fitxa.id%>">Fitxa <%= fitxa.id %>:</a> <%= fitxa.name %> - <%= fitxa.description %></li>
+            <% }); %>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <% include partials/footer %>
+</footer>
+
+</body>
+</html>

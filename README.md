@@ -54,3 +54,7 @@ $ npm install
     ```
     $ jasmine init
     ```
+8. Fer commits i pujar-ho al github establint la branca local de desenvolupament perque segueixi la branca remota de de desenvolupament
+```
+$ git push --set-upstream origin development
+```
